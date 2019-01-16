@@ -1,0 +1,14 @@
+﻿@model WebApplication1.ViewModel.MovieViewModel
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<table  class=“table  table-­‐bordered  table-­‐hover”>
+    @foreach (var movie in Model.MovieList)
+    {
+        <tr>
+            <td>@movie.Name</td>
+        </tr>
+    }
+</table>

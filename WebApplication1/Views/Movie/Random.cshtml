@@ -1,0 +1,14 @@
+﻿@model WebApplication1.ViewModel.MovieViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    var className = Model.Customers.Count > 5 ? "special" : null;
+}
+<h2 class="@className">@Model.Movie.Name - @Model.Customers.Count</h2>
+@foreach(var customer in Model.Customers)
+{
+    <p>@customer.Name</p>
+}
